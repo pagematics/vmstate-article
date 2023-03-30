@@ -7,10 +7,13 @@ public class SingletonClient {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Singleton 
-		singletonInstance = Singleton.getInstance();
-		singletonInstance.doSomething();
-
+		Singleton singletonInstance1 = Singleton.getInstance();
+		singletonInstance1.doSomething();
+		System.out.println("singletonInstance1: "+singletonInstance1.hashCode());
+		
+		Singleton singletonInstance2 = Singleton.getInstance();
+		singletonInstance2.doSomething();
+		System.out.println("singletonInstance2: "+singletonInstance2.hashCode());
 	}
 
 }
