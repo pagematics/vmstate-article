@@ -9,11 +9,11 @@ public class SingletonClient {
 		
 		Singleton singletonInstance1 = Singleton.getInstance();
 		singletonInstance1.doSomething();
-		System.out.println("singletonInstance1: "+singletonInstance1.hashCode());
+		System.out.println("singletonInstance1 hashcode: "+singletonInstance1.hashCode());
 		
 		Singleton singletonInstance2 = Singleton.getInstance();
 		singletonInstance2.doSomething();
-		System.out.println("singletonInstance2: "+singletonInstance2.hashCode());
+		System.out.println("singletonInstance2 hashcode: "+singletonInstance2.hashCode());
 	}
 
 }
