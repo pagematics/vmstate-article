@@ -1,22 +1,22 @@
 package vmstate.designpattern.singleton.case001;
 
-public class Singleton {
+public class LazySingleton {
     // static variable to hold the single instance of the Singleton class
-    private static Singleton instance;
+    private static LazySingleton instance;
 
     // private constructor to prevent direct instantiation of the class
-    private Singleton() {}
+    private LazySingleton() {}
 
     // static method to get the single instance of the Singleton class
-    public static Singleton getInstance() {
+    public static LazySingleton getInstance() {
         if (instance == null) {
-            instance = new Singleton();
+            instance = new LazySingleton();
         }
         return instance;
     }
 
     // methods of the Singleton class
     public void doSomething() {
-        System.out.println("Singleton doSomething");
+        System.out.println("Lazy Singleton doSomething");
     }
 }
