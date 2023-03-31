@@ -28,3 +28,4 @@ public class ReflectionSingletonClient
         System.out.println("reflectionSingletonInstance2 hashcode: "+reflectionSingletonInstance2.hashCode());
     }
 }
+
