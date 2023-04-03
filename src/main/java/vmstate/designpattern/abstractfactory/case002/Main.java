@@ -4,17 +4,18 @@ package vmstate.designpattern.abstractfactory.case002;
 public class Main 
 {
 	public static void main(String[] args) {
+		Application app;
     	GUIFactory factory;
-    	String currentPlatform = null;
-		if (currentPlatform  == Platform.WINDOWS) {
+		String currentPlatform = "Windows";
+		if (currentPlatform.equalsIgnoreCase("Windows")) {
         	factory = new WindowsFactory();
-    	} else if (currentPlatform == Platform.MAC) {
+    	} else if (currentPlatform.equalsIgnoreCase("Mac")) {
         	factory = new MacFactory();
     	} else {
         	factory = new LinuxFactory();
     	}
-    	Application app = new Application(factory);
-    	app.createUI();
+    	//app = new Application(factory);
+    	//app.createUI();
 	}
 
 
