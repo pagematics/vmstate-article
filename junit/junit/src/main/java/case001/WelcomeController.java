@@ -15,7 +15,7 @@ public class WelcomeController {
         this.welcomeService = welcomeService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/welcome")
     public @ResponseBody String greeting() {
         return welcomeService.getWelcomeMessage();
     }

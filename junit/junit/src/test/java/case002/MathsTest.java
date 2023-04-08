@@ -18,7 +18,7 @@ public class MathsTest {
     @Test
     public void AddTest()
     {
-    	assertEquals(30, maths.addNumbers(12, 18));
+    	assertEquals(30, maths.addNumbers(10, 18));
     }
     
 }
