@@ -20,18 +20,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import okhttp3.*;
 
 @RestController
 public class FileController {
 	
-	private static final String SUBSCRIPTION_KEY = "b693520ec4908d32bb43818920";
-	private static final String ENDPOINT = ".cognitiveservices.azure.com/";
+	private static final String SUBSCRIPTION_KEY = "bd65975c089746a6a7130d76";
+	private static final String ENDPOINT = "cognitiveservices.azure.com";
 	
     @PostMapping("/check-file")
     public void checkFile(@RequestParam("file") MultipartFile file) throws IOException 
     {
     	String extension = StringUtils.getFilenameExtension(file.getOriginalFilename());
+    	ScreenTextOptionalParameter options = new ScreenTextOptionalParameter();
+    	options.withLanguage("eng");
+    	options.withAutocorrect(true);
+    	options.withPII(true);
+    	options.withClassify(true);
+    	options.withListId("2223");
     	
     	ContentModeratorClient client = ContentModeratorManager.authenticate(AzureRegionBaseUrl.fromString(ENDPOINT),
     			SUBSCRIPTION_KEY);
@@ -44,7 +50,9 @@ public class FileController {
             fos.write( file.getBytes() );
             fos.close();
             Screen textResults = null;
-            textResults = client.textModerations().screenText("text/plain", textFile.toString().getBytes(), null);
+            textResults = client.textModerations().screenText("text/plain", textFile.toString().getBytes(), options);
+            
+            
             System.out.println("Text moderation status: " + textResults.status().description());
             System.out.println();
         	}
