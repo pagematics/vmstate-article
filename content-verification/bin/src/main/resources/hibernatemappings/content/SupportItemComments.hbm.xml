@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name = "content.CommentTO" table = "comments" catalog="public">
+		<id name="commentId" type="java.lang.Integer">
+			<column name="comment_id" />
+			<generator class="identity" />
+		</id>
+		<property name="entityType" type="string">
+			<column name="entity_type"  />
+		</property>
+		<property name="entityId" type="java.lang.Integer">
+			<column name="entity_id"  />
+		</property>
+		<property name="siteId" type="java.lang.Integer">
+			<column name="site_id"  />
+		</property>
+		<property name="applicationId" type="java.lang.Integer">
+			<column name="application_id"  />
+		</property>
+		<property name="commentData" type="string">
+			<column name="comment_data"  />
+		</property>
+		<property name="userCreated" type="java.lang.Integer" insert="true"
+			update="true" >
+			<column name="user_created" not-null="true" />
+		</property>
+		<property name="userModified" type="java.lang.Integer" insert="true"
+			update="true" >
+			<column name="user_modified" />
+		</property>
+		<property name="createdTime" type="java.util.Date" 
+			insert="true" update="false" not-null="true">
+			<column name="created_time"  />
+		</property>
+		<property name="updatedTime" type="java.util.Date" 
+			insert="true" update="true">
+			<column name="updated_time" />
+		</property>
+	</class>
+</hibernate-mapping>
+		
