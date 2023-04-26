@@ -15,8 +15,8 @@ import content.image.ImageModerationService;
 @Service("imageModerationService")
 public class ImageModerationServiceImpl implements ImageModerationService
 {
-	private static final String SUBSCRIPTION_KEY = "bd65975c089746a6a7d446f8a7130d76";
-	private static final String ENDPOINT = "https://pagematics.cognitiveservices.azure.com/";
+	private static final String SUBSCRIPTION_KEY = "bd65975c08a7d446f8a7130d76";
+	private static final String ENDPOINT = "https:/cognitiveservices.azure.com/";
 
 	@Override
 	public ImageModerationResponseHB moderateImage(String imageurl, boolean imageReviewRequired) 

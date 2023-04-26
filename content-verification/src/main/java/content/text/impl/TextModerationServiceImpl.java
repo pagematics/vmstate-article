@@ -15,8 +15,8 @@ import content.text.TextModerationService;
 @Service("textModerationService")
 public class TextModerationServiceImpl implements TextModerationService
 {
-	private static final String SUBSCRIPTION_KEY = "bd65975c089746a6a7d446f8a7130d76";
-	private static final String ENDPOINT = "https://pagematics.cognitiveservices.azure.com/";
+	private static final String SUBSCRIPTION_KEY = "bd65975c08974a7130d76";
+	private static final String ENDPOINT = "https:/cognitiveservices.azure.com/";
 	
 	@Override
 	public TextModerationResponseHB moderateText(String comment, String language, boolean checkPII, boolean checkProfanity)
