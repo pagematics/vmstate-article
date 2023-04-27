@@ -1,4 +1,4 @@
-package content;
+package com.smartwcm.content;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.AutoConfiguration;

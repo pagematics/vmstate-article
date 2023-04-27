@@ -1,4 +1,4 @@
-package content;
+package com.smartwcm.content;
 
 import com.microsoft.azure.cognitiveservices.vision.contentmoderator.models.Evaluate;
 

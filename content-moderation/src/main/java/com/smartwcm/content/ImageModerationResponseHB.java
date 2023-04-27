@@ -1,4 +1,4 @@
-package content;
+package com.smartwcm.content;
 
 public class ImageModerationResponseHB 
 {

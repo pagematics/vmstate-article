@@ -1,4 +1,4 @@
-package content.image.impl;
+package com.smartwcm.content.image.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,17 +11,17 @@ import com.microsoft.azure.cognitiveservices.vision.contentmoderator.ContentMode
 import com.microsoft.azure.cognitiveservices.vision.contentmoderator.models.AzureRegionBaseUrl;
 import com.microsoft.azure.cognitiveservices.vision.contentmoderator.models.BodyModelModel;
 import com.microsoft.azure.cognitiveservices.vision.contentmoderator.models.EvaluateUrlInputOptionalParameter;
-import content.EvaluationData;
-import content.ImageModerationResponseHB;
-import content.image.ImageModerationService;
-import content.text.impl.TextModerationServiceImpl;
+import com.smartwcm.content.EvaluationData;
+import com.smartwcm.content.ImageModerationResponseHB;
+import com.smartwcm.content.image.ImageModerationService;
+import com.smartwcm.content.text.impl.TextModerationServiceImpl;
 
 @Service("imageModerationService")
 public class ImageModerationServiceImpl implements ImageModerationService
 {
-	private static final String SUBSCRIPTION_KEY = "bd65975c08a7d446f8a7130d76";
-	private static final String ENDPOINT = "https:/cognitiveservices.azure.com/";
-	private static final Logger	logger	= LoggerFactory.getLogger(TextModerationServiceImpl.class);
+	private static final String SUBSCRIPTION_KEY = "bd65975c046f8a7130d76";
+	private static final String ENDPOINT = "https://.cognitiveservices.azure.com/";
+	private static final Logger	logger	= LoggerFactory.getLogger(ImageModerationServiceImpl.class);
 
 	@Override
 	public ImageModerationResponseHB moderateImage(String imageurl, boolean checkImage) 

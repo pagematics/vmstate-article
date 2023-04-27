@@ -1,4 +1,4 @@
-package content.text.impl;
+package com.smartwcm.content.text.impl;
 
 
 import org.slf4j.Logger;
@@ -10,15 +10,14 @@ import com.microsoft.azure.cognitiveservices.vision.contentmoderator.ContentMode
 import com.microsoft.azure.cognitiveservices.vision.contentmoderator.models.AzureRegionBaseUrl;
 import com.microsoft.azure.cognitiveservices.vision.contentmoderator.models.Screen;
 import com.microsoft.azure.cognitiveservices.vision.contentmoderator.models.ScreenTextOptionalParameter;
-
-import content.TextModerationResponseHB;
-import content.text.TextModerationService;
+import com.smartwcm.content.TextModerationResponseHB;
+import com.smartwcm.content.text.TextModerationService;
 
 @Service("textModerationService")
 public class TextModerationServiceImpl implements TextModerationService
 {
-	private static final String SUBSCRIPTION_KEY = "bd65975c08974a7130d76";
-	private static final String ENDPOINT = "https:/cognitiveservices.azure.com/";
+	private static final String SUBSCRIPTION_KEY = "bd6597446f8a7130d76";
+	private static final String ENDPOINT = "https://.cognitiveservices.azure.com/";
 	private static final Logger	logger	= LoggerFactory.getLogger(TextModerationServiceImpl.class);
 	
 	@Override

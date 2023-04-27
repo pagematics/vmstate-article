@@ -1,6 +1,6 @@
-package content.image;
+package com.smartwcm.content.image;
 
-import content.ImageModerationResponseHB;
+import com.smartwcm.content.ImageModerationResponseHB;
 
 public interface ImageModerationService 
 {

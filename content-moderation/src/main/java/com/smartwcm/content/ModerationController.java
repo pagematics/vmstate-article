@@ -1,4 +1,4 @@
-package content;
+package com.smartwcm.content;
 
 import java.io.IOException;
 
@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import content.image.ImageModerationService;
-import content.text.TextModerationService;
+
+import com.smartwcm.content.image.ImageModerationService;
+import com.smartwcm.content.text.TextModerationService;
+
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 

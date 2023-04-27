@@ -1,7 +1,7 @@
-package content.text;
+package com.smartwcm.content.text;
 
 
-import content.TextModerationResponseHB;
+import com.smartwcm.content.TextModerationResponseHB;
 
 public interface TextModerationService 
 {
