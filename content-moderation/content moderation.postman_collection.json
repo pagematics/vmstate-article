@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "d3df2f29-56fd-40f6-a2b7-b1fe5d67b977",
+		"name": "content moderation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/contentmoderation/text-moderation?language=eng&checkPII=true&checkProfanity=true\n",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "comment",
+							"value": "abcd@gmail.com ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/contentmoderation/text-moderation?language=eng&checkPII=true&checkProfanity=true\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contentmoderation",
+						"text-moderation"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "eng"
+						},
+						{
+							"key": "checkPII",
+							"value": "true"
+						},
+						{
+							"key": "checkProfanity",
+							"value": "true\n"
+						}
+					]
+				},
+				"description": "text moderation"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/contentmoderation/text-moderation?language=eng&checkPII=true&checkProfanity=true\n",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "comment",
+									"value": "abcd@gmail.com ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/contentmoderation/text-moderation?language=eng&checkPII=true&checkProfanity=true\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contentmoderation",
+								"text-moderation"
+							],
+							"query": [
+								{
+									"key": "language",
+									"value": "eng"
+								},
+								{
+									"key": "checkPII",
+									"value": "true"
+								},
+								{
+									"key": "checkProfanity",
+									"value": "true\n"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2023 14:52:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"profanityReviewRecommended\": false,\n    \"pIIReviewRecommended\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/contentmoderation/image-moderation?checkImage=true",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imageurl",
+							"value": "https://de65jv7hxilur.cloudfront.net/prod/dc/cbrain-app/files/doc-lib/2020/07/11/07/27/40/995/head/Day%2001-thumbnail.png",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/contentmoderation/image-moderation?checkImage=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contentmoderation",
+						"image-moderation"
+					],
+					"query": [
+						{
+							"key": "checkImage",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/contentmoderation/image-moderation?checkImage=true",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imageurl",
+									"value": "https://de65jv7hxilur.cloudfront.net/prod/dc/cbrain-app/files/doc-lib/2020/07/11/07/27/40/995/head/Day%2001-thumbnail.png",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/contentmoderation/image-moderation?checkImage=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contentmoderation",
+								"image-moderation"
+							],
+							"query": [
+								{
+									"key": "checkImage",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2023 14:43:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"imageReviewRequired\": false\n}"
+				}
+			]
+		}
+	]
+}
