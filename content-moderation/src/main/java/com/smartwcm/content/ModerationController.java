@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @RestController
 @AutoConfiguration
-@ComponentScan("content")
+@ComponentScan("com.smartwcm.content")
 @RequestMapping("contentmoderation")
 public class ModerationController 
 {

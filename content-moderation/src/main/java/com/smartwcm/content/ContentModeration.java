@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 @AutoConfiguration
 @SpringBootApplication
-@ComponentScan("content")
+@ComponentScan("com.smartwcm.content")
 public class ContentModeration extends SpringBootServletInitializer
 {
 	 public static void main(String[] args) 
