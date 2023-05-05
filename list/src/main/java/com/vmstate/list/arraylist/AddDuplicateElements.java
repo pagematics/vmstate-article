@@ -1,12 +1,13 @@
 package com.vmstate.list.arraylist;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddDuplicateElements 
 {
 	public static void main(String arg[])
 	{
-		 ArrayList<String> arrayList = new ArrayList<String>(); 
+		 List<String> arrayList = new ArrayList<String>(); 
 		 // Adding elements to the list
 		 arrayList.add("Nila");
 		 arrayList.add("Kevin");

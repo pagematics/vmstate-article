@@ -1,12 +1,13 @@
 package com.vmstate.list.arraylist;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DyanamicallyChangeSize 
 {
 public static void main(String[] arg)
 {
-	ArrayList<String> members = new ArrayList<String>(5);
+	List<String> members = new ArrayList<String>(5);
 	members.add("John");
 	members.add("Smith");
 	members.add("Kiran");
