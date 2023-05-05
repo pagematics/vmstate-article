@@ -13,7 +13,6 @@ public class AddDuplicateElements
 		 arrayList.add("Kevin");
 		 arrayList.add("Anna");
 		 arrayList.add("Kevin");
-		    
 		 System.out.println("Students List: "+ arrayList); 
 		 System.out.println("Student at index1: "+ arrayList.get(1)); 
 		 System.out.println("Student at index2: "+ arrayList.get(3)); 
