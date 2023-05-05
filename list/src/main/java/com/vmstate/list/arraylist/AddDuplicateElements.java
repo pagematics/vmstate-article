@@ -7,7 +7,6 @@ public class AddDuplicateElements
 	public static void main(String arg[])
 	{
 		 ArrayList<String> arrayList = new ArrayList<String>(); 
-
 		 // Adding elements to the list
 		 arrayList.add("Nila");
 		 arrayList.add("Kevin");
