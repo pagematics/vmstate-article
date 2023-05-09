@@ -7,7 +7,7 @@ public class CommonLinkedListOperations
 	public static void main(String[] arg)
 	{
 			// Declaring a LinkedList
-			LinkedList<Integer> linkedList1 = new LinkedList<Integer>();
+			List<Integer> linkedList1 = new LinkedList<Integer>();
 
 			// Declaring a second LinkedList
 			LinkedList<Integer> linkedList2 = new LinkedList<Integer>();
