@@ -1,13 +1,13 @@
-package com.vmstate.log4j.case001;
+package com.vmstate.log4j2.case001;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Log4jExample
+public class Log4j2Example
 {  
 	//creating an instance of logger
   
-   private static final Logger logger = LogManager.getLogger(Log4jExample.class);
+   private static final Logger logger = LogManager.getLogger(Log4j2Example.class);
    public static void main(String[] args) 
    {
 	   logger.trace("This is a trace message");
