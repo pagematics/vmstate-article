@@ -1,12 +1,11 @@
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-
+import { Readable } from 'stream';
+import { parseAsync } from 'json2csv';
+import {ShareServiceClient, StorageSharedKeyCredential}  from '@azure/storage-file-share';
 export async function saveCSV(request: HttpRequest, context: InvocationContext): Promise<HttpResponseInit> {
     context.log(`Http function processed request for url "${request.url}"`);
             //fetching the required methods
             const config = require("./config");
-            const json2csv = require('json2csv').Parser;
-            const { Readable } = require('stream');
-            const {ShareServiceClient, StorageSharedKeyCredential} = require('@azure/storage-file-share');
             const { storageAccount, storageAccountKey, shareName, directoryName} = config;
             const credential = new StorageSharedKeyCredential(storageAccount, storageAccountKey);
             const serviceClient = new ShareServiceClient(
@@ -23,15 +22,15 @@ export async function saveCSV(request: HttpRequest, context: InvocationContext):
              
             var user = JSON.parse(data);
               // Convert JSON data to CSV
-              const json2csvParser = new json2csv();
-              const csvData = json2csvParser.parse(user);
-              //upload the csv file to blob
-   
-              const streamData = Readable.from([csvData]);
-              const fileName = `${user}.csv`;
+              const csvData = await parseAsync(user);
+              //upload the csv file
+              
+              const streamData = Readable.from(csvData); 
+              const now = new Date();
+              const fileName = `${now.getTime()}.csv`;
               const directoryClient = serviceClient.getShareClient(shareName).getDirectoryClient(directoryName);
               const fileClient = directoryClient.getFileClient(fileName);
-              await fileClient.uploadStream(streamData, csvData.length);
+              await fileClient.uploadStream(streamData, csvData.length,  4 * 1024 * 1024, 20);
             } catch (err) {
               errorMessage = err.message.split('.')[0];
               console.log(err.message);
